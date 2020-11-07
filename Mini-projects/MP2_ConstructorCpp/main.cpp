@@ -38,8 +38,6 @@ void z16(Ul &&ul) //16
 
 int main()
 {
-    //zrobione do 26 włącznie
-
     Ul Ul1(89, "Ul1");
     cout << "Pszczol w ulu: " << Ul1.podaj_liczbe_pszczol() << endl;
     Ul1.zmiana(-20);
