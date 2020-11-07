@@ -18,5 +18,5 @@ void Stopper::reset(){
 }
 
 void Stopper::print_time(){
-    cout << "Wynik pomiaru (ms): " << ((float)t)/CLOCKS_PER_SEC << endl;
+    cout << "Wynik pomiaru (s): " << ((float)t)/CLOCKS_PER_SEC << endl;
 }
