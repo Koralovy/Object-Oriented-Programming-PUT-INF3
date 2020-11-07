@@ -9,7 +9,7 @@ public:
     Ul(int startowa_liczba_pszczol, string nazwa){
         this -> liczba_pszczol = startowa_liczba_pszczol;
         this -> nazwa_pasieki = nazwa;
-        this -> wskaznik_prodkucji = 0;
+        this -> wskaznik_produkcji = 0;
         this -> ogolna_produkcja = 0;
     }
 
@@ -50,8 +50,8 @@ public:
 
     double odczytaj_wskaznik(){
         if (this -> wartosci_roczne.size() > 0){
-            this -> wskaznik_prodkucji = this -> ogolna_produkcja / this -> wartosci_roczne.size();
-            return this -> wskaznik_prodkucji;
+            this -> wskaznik_produkcji = this -> ogolna_produkcja / this -> wartosci_roczne.size();
+            return this -> wskaznik_produkcji;
         }
         return 0;
     }
@@ -78,7 +78,7 @@ public:
 private:
     int liczba_pszczol;
     string szerokosc_geogr, dlugosc_geogr;
-    double wskaznik_prodkucji;
+    double wskaznik_produkcji;
     string nazwa_pasieki;
     vector <int> wartosci_roczne;
     int ogolna_produkcja;
