@@ -87,13 +87,13 @@ Ul::Ul(Ul &&x) : Logger(true){ //przenoszący
     wartosc_ula = x.wartosc_ula;
     wartosci_roczne = move(x.wartosci_roczne);
 
-    liczba_pszczol = nullptr;
-    szerokosc_geogr = nullptr;
-    dlugosc_geogr = nullptr;
-    wskaznik_produkcji = nullptr;
-    nazwa_pasieki = nullptr;
-    ogolna_produkcja = nullptr;
-    wartosc_ula = nullptr;
+    x.liczba_pszczol = nullptr;
+    x.szerokosc_geogr = nullptr;
+    x.dlugosc_geogr = nullptr;
+    x.wskaznik_produkcji = nullptr;
+    x.nazwa_pasieki = nullptr;
+    x.ogolna_produkcja = nullptr;
+    x.wartosc_ula = nullptr;
     wartosci_roczne.clear();
 }
 
