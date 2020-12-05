@@ -63,10 +63,10 @@ int main()
     cout << "\npbar: ";
     obar(&albert);
     */
-    //Z12: Wszystkie wywolania dzialaja zgodnie z oczekiwaniami odwolujac sie do pewnych klas
-    //Z14: Specyfikator virtual usuwa możliwość wielokrotnego występowania funkcji bazowej (Osoba) poprzez jej wirtualizacje dla innych klas.
+    //Z12: Wszystkie wywolania dzialaja zgodnie z oczekiwaniami wywołują metodę przedstaw
+    //Z14: Specyfikator virtual usuwa możliwość wielokrotnego występowania definicji klasy bazowej (Osoba) poprzez jej wirtualizacje. Wywołania poprawne
 
-    //Z15: Rzutowania kompilują się poprawnie, konwersacje zastosowane zostały przesadnie.
+    //Z15: Rzutowania kompilują się poprawnie, daja one dostep takze do metod, ktore nie powinny byc wywołane.
     Pracownik *p1 = new Pracownik;
     Osoba *o1 = static_cast<Osoba *>(p1);
     Osoba *o2 = static_cast<Pracownik *>(o1);
@@ -84,9 +84,9 @@ int main()
     if (p5 == nullptr) cout << "Blad rzutowania!" << endl;
     else p5 -> odczytaj_przedmioty();
     */
-    //Z17: test dynamic_cast!=nullptr jest roznie interpretowane w roznych wersjach jezyka. Czasami może zwracać dodatkowe błędy  i zagłębia się we wszystkie klasy.
+    //Z17: test dynamic_cast!=nullptr jest roznie interpretowane w roznych wersjach jezyka. Czasami może zwracać dodatkowe błędy i zagłębia się we wszystkie klasy.
     //Z18-19: funkcja Osoba::przedstaw staje sie wirutalna co uniemozliwia jej wywolanie
-    //Z22: program dziala pozornie w pełni poprawnie, elementy deklarowane od z15 nie wywolują destruktora, ponieważ nie są zaalokowane.
+    //Z22: program dziala pozornie w pełni poprawnie, elementy deklarowane od z15 nie wywolują destruktora, ponieważ nie są zaalokowane slowem virtual.
     //Z23: usunięcie obiektu klasy pochodnej przestaje wywoływać niezdefiniowane zachowanie.
     FabrykaPracownikow* fp = new FabrykaPracownikow();
     FabrykaStudentow* fo = new FabrykaStudentow();
