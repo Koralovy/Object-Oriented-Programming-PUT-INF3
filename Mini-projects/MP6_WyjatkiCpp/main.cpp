@@ -109,9 +109,6 @@ void bar(Stack &s) {
     }
 }
 
-
-
-
 int main()
 {
     Stack s(3);
@@ -146,8 +143,6 @@ int main()
         catch(StackException &e){
             cout << e.what();
         }
-
-
     }
     //Z5: program dziala zgodnie z oczekiwaniami, wrzuca elementy do rozmiaru, przy rozmiar+1 lapie wyjatek'
     //Z6: blad przy ostatnim elemencie nie powoduje cofniecia poprawnie wprowadzonych zmian, wiec przy wywolaniu bar(s) stos juz na wejsciu jest zapelniony
